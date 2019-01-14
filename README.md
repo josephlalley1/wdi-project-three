@@ -110,6 +110,25 @@ Show an event page:
 
 ---
 
+### Code Wins
+
+This was a very interesting snippet in my opinion, as it introduced me to the mongoose validator and also the use of Regex, in order to create the many password rules (including a password has to be at least 8 characters long).
+
+```
+const userSchema = mongoose.Schema({
+  username: String,
+  email: String,
+  password: {type: String,
+    validate: [
+      {
+        validator: (pwd) => pwd.match(/^(?=\w{8,})(?=.*\d)(?=.*[A-Z]+).*$/),
+        message: '{VALUE} does not match all fields. Must contain uppercase, lowercase and numeric characters, as well as being at least 8 characters long.'
+      }
+    ]},
+```
+
+---
+
 ### Challenges and Problems
 
 - My biggest personal challenge of this project for me was that I didn't have much experience in group work and at the beginning I struggled with it. I think I picked up how to work better in a group quickly and we overcame this challenge together.

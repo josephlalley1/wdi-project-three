@@ -19,7 +19,7 @@ Your app must:
 - Use SCSS instead of CSS
 - Use Webpack & Yarn to manage your dependencies and compile your source code
 
-[**Heroku**]()
+[**Heroku**](https://gighub-projectthree.herokuapp.com/#!/)
 
 [**GitHub Repository**](https://github.com/josephlalley1/wdi-project-three)
 
